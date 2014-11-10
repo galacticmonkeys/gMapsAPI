@@ -1,0 +1,71 @@
+html { 
+	height: 100% 
+}
+
+body { 
+	height: 100%;
+	margin: 0;
+	padding: 0 
+}
+
+#map-canvas {
+	height: 100%;
+	width: 100%; 
+}
+
+#search {
+	z-index: 10;
+	position: absolute;
+	left: 5em;
+	top: 0px;
+	line-height: 30px;
+	height: 30px;
+	margin: 15px 15px 15px 30px;
+}
+
+#address {
+	font-family: lato;
+	font-weight: 500;
+	font-size: 0.8em;
+	font-size: 1em;
+	border: 2px solid;
+}
+
+#directions-panel {
+	direction: ltr;
+	position: relative;
+	overflow-y: scroll;
+	white-space: pre-line;
+	width: 500px;
+	height: 300px;
+	display: none;
+	background: white;
+	border: 2px solid;
+}
+
+#mode {
+	line-height: 30px;
+	font-size: 1em;
+	border: 2px solid;
+}
+
+#button {
+	border: 2px solid;
+	font-family: 'lato';
+	font-weight: 400;
+	font-size: 1em;
+	padding: 0 30px;
+	background-color: #4d90fe;
+}
+
+
+@media print {
+	#map-canvas {
+		display: none;
+	}
+
+	#directions-panel {
+	  width: auto;
+	  height: auto;
+	}
+}

@@ -1,0 +1,49 @@
+<!--  ClickTime Intern Challenge 2: how can you get from your current location to the ClickTime office, if you have to stop off somewhere to get coffee and donuts for the dev team? 
+
+The user will enter their current address. The program will take the first search result (ranked by prominence) of coffee/donut stores within a 2000 meter radius of ClickTime. 
+
+Possible options for better usability: 
+1) options to specify transit times
+2) autocomplete for user-input location
+3) more helpful alert messages
+4) allow user to specify radius of coffee/donut shops
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Coffee & Donuts 5Ever</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"; charset = "utf-8">
+    <link rel="stylesheet" type="text/css" href="styleElements.css">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDs3F5RE47wCio62oVYB-HTExpR88Sh2k0"></script>
+    <script type="text/javascript" src="map.js"></script>
+  </head>
+	<script>
+
+	</script>
+  <body>
+    <div id="search">
+      <input id="address" type="textbox" value= "" placeholder="Current address">
+      <strong style = "font-size: 1em;">Mode of Travel: </strong>
+      <select id="mode">
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
+      <input id="button"type="button" value="Go" onclick="calcRoute()">
+
+
+    <div id="directions-panel"></div>
+
+    </div>
+    <div id="map-canvas"></div>
+
+  </body>
+</html>
+
+
+
+
