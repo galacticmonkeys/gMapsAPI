@@ -91,5 +91,3 @@ function calcRoute(start) {
 }
 
 google.maps.event.addDomListener(window,'load', initialize);
-
-
