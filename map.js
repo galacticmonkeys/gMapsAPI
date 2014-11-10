@@ -55,8 +55,8 @@ function initialize() {
 
 	searchService.nearbySearch(donutRequest, function(results, status) {
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
-			    donutLocation = results[0].vicinity;
-			 	waypts.push({location: donutLocation, stopover: true});
+		    donutLocation = results[0].vicinity;
+		 	waypts.push({location: donutLocation, stopover: true});
      	} else {
  			alert('Uh oh, I couldnt find a donut shop because ' + status);
  		}
@@ -65,7 +65,6 @@ function initialize() {
 
 function calcRoute(start) {
 	var start, startString, selectedMode, request;
-    document.getElementById("directions-panel").style.display = "block";
 	start = document.getElementById("address").value;
 	startString = String(start);
 	selectedMode = document.getElementById('mode').value;
@@ -82,10 +81,13 @@ function calcRoute(start) {
 	directionsService.route(request, function(response, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 		    directionsDisplay.setDirections(response);
+    		document.getElementById("directions-panel").style.display = "block";
 		} else if(google.maps.DirectionsStatus.ZERO_RESULTS && selectedMode == "TRANSIT") {
-			alert('No public transit service is operating at this time. Try again later!');
+			alert('The API doesnt currently support waypoints for transit directions.');
+			document.getElementById("directions-panel").style.display = "none";
 		} else {
 			alert('Looks like something went wrong because ' + status);
+			document.getElementById("directions-panel").style.display = "none";
 		}
 	});
 }
