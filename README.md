@@ -1,1 +1,1 @@
-finds a route passing through donuts and coffee shops from a given location and directs a route to the office
+given a given starting location, finds the closest donut and coffee shops to the office, and calculates a route to the office passing by those donut and coffee shops
