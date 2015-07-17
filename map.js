@@ -16,7 +16,7 @@ function initialize() {
 	coffeeRequest = {
 		location: ClickTime,
 		keyword: "coffee",
-		rankBy: google.maps.places.RankBy.PROMINENCE,
+		rankBy: google.maps.places.RankBy.DISTANCE,
 		types: ['cafe' , 'food' , 'meal_takeaway' , 'meal_delivery'],
 		radius: 2000
 	} 
@@ -24,7 +24,7 @@ function initialize() {
 	donutRequest = {
 		location: ClickTime,
 		keyword: "donuts",
-		rankBy: google.maps.places.RankBy.PROMINENCE,
+		rankBy: google.maps.places.RankBy.DISTANCE,
 		types: ['cafe' , 'food' , 'meal_takeaway' , 'meal_delivery'],
 		radius: 2000
 	}
